@@ -1,0 +1,167 @@
+/* Reset and base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.bg {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: box-shadow 0.4s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0 25px #00ff7f, 0 0 40px #00ff7f;
+}
+
+.card img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #00ff7f;
+}
+
+.intro {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 15px 0 8px;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 15px;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.skills li {
+  font-size: 1rem;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.skills li:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.tag {
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 8px;
+  background-color: #00ff7f;
+  color: #000;
+  font-weight: bold;
+  margin-left: 10px;
+  white-space: nowrap;
+  transition: 0.3s ease;
+}
+
+.tag:hover {
+  background-color: #fff;
+  color: #00ff7f;
+  transform: scale(1.05);
+}
+
+a {
+  color: #00ff7f;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #00ff7f;
+  color: #000;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.button:hover {
+  background: #fff;
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .intro,
+  .skills li {
+    font-size: 0.95rem;
+  }
+
+  .skills {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .button {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .card img {
+    max-width: 100%;
+  }
+}
