@@ -6,27 +6,42 @@
   <title>Zanhal's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
+  <!-- Dark Mode Toggle -->
+  <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+
   <div class="bg">
-    <div class="card">
+    <div class="card" data-aos="zoom-in">
+      <!-- Animated Blob Background -->
+      <div class="blob"></div>
+
       <!-- Profile Photo -->
-      <img class="profile-pic" src="Zanhal.jpg" alt="Zanhal's Photo" />
+      <img class="profile-pic" src="Zanhal.jpg" alt="Portrait of Zanhal, aspiring developer" />
 
       <h1>Hello, I'm <span class="highlight">Zanhal</span> 👽</h1>
-      <p class="intro">Aspiring Developer · Every expert was once a beginner.</p>
+      <p class="typewriter">Aspiring Developer · Every expert was once a beginner.</p>
 
-      <h2>👾 Skills</h2>
+      <h2 data-aos="fade-up">👾 Skills</h2>
       <ul class="skills">
         <li>HTML & CSS <span class="tag learning">Learning</span></li>
-        <li>C++ <span class="tag beginner">Beginner</span></li>
-        <li>Java Programming <span class="tag beginner">Beginner</span></li>
       </ul>
 
-      <h2>📬 Contact</h2>
+      <h2 data-aos="fade-up">📬 Contact</h2>
       <p>Email: <a href="mailto:Zanhalc.k@gmail.com">Zanhalc.k@gmail.com</a></p>
       <a class="button" href="https://www.linkedin.com/in/zanhal" target="_blank">🔗 LinkedIn</a>
     </div>
   </div>
+
+  <!-- AOS Scroll Animation Script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
 </body>
 </html>
