@@ -10,13 +10,10 @@
 </head>
 <body>
   <!-- Dark Mode Toggle -->
-  <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+  <button class="dark-toggle" onclick="toggleDarkMode()">🌑</button>
 
   <div class="bg">
     <div class="card" data-aos="zoom-in">
-      <!-- Animated Blob Background -->
-      <div class="blob"></div>
-
       <!-- Profile Photo -->
       <img class="profile-pic" src="Zanhal.jpg" alt="Portrait of Zanhal, aspiring developer" />
 
@@ -30,7 +27,11 @@
 
       <h2 data-aos="fade-up">📬 Contact</h2>
       <p>Email: <a href="mailto:Zanhalc.k@gmail.com">Zanhalc.k@gmail.com</a></p>
-      <a class="button" href="https://www.linkedin.com/in/zanhal" target="_blank">🔗 LinkedIn</a>
+
+      <div class="button-group">
+        <a class="button" href="https://www.linkedin.com/in/zanhal" target="_blank">🔗 LinkedIn</a>
+        <a class="button" href="https://github.com/zanhal" target="_blank">💻 GitHub</a>
+      </div>
     </div>
   </div>
 
@@ -38,7 +39,6 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
-
     function toggleDarkMode() {
       document.body.classList.toggle('dark');
     }
