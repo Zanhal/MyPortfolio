@@ -9,9 +9,6 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-  <!-- Dark Mode Toggle -->
-  <button class="dark-toggle" onclick="toggleDarkMode()" id="modeToggle">🌑</button>
-
   <div class="bg">
     <div class="card" data-aos="zoom-in">
       <!-- Profile Photo -->
@@ -39,20 +36,6 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
-
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark');
-      const toggleBtn = document.getElementById('modeToggle');
-      const isDark = document.body.classList.contains('dark');
-      toggleBtn.textContent = isDark ? '☀️' : '🌑';
-    }
-
-    // Set correct icon on page load
-    window.addEventListener('DOMContentLoaded', () => {
-      const toggleBtn = document.getElementById('modeToggle');
-      const isDark = document.body.classList.contains('dark');
-      toggleBtn.textContent = isDark ? '☀️' : '🌑';
-    });
   </script>
 </body>
 </html>
