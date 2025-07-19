@@ -7,8 +7,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  color: #fff;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* dark mode bg now default */
+  color: #e0e0e0;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -24,7 +24,7 @@ body {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(12px);
   border-radius: 20px;
   padding: 30px;
@@ -32,7 +32,7 @@ body {
   max-width: 500px;
   width: 100%;
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: box-shadow 0.4s ease;
   position: relative;
   z-index: 1;
@@ -58,7 +58,7 @@ h1 {
 }
 
 .highlight {
-  color: #00ff7f;
+  color: #fff; /* flipped from #00ff7f */
 }
 
 .typewriter {
@@ -113,8 +113,8 @@ h2 {
   font-size: 0.75rem;
   padding: 2px 8px;
   border-radius: 8px;
-  background-color: #00ff7f;
-  color: #000;
+  background-color: #fff; /* flipped from green */
+  color: #00ff7f;
   font-weight: bold;
   margin-left: 10px;
   white-space: nowrap;
@@ -122,8 +122,8 @@ h2 {
 }
 
 .tag:hover {
-  background-color: #fff;
-  color: #00ff7f;
+  background-color: #00ff7f;
+  color: #000;
   transform: scale(1.05);
 }
 
@@ -139,15 +139,16 @@ a:hover {
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background: #00ff7f;
-  color: #000;
+  background: #fff; /* flipped from green */
+  color: #00ff7f;
   border-radius: 10px;
   font-weight: bold;
   transition: background 0.3s, transform 0.3s;
 }
 
 .button:hover {
-  background: #fff;
+  background: #00ff7f;
+  color: #000;
   transform: scale(1.05);
 }
 
@@ -159,24 +160,24 @@ a:hover {
   margin-top: 15px;
 }
 
-/* Dark Mode */
+/* 🔄 Flipped: Light Mode (was dark mode) */
 body.dark {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: #e0e0e0;
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* now light mode */
+  color: #fff;
 }
 
 body.dark .card {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 body.dark .tag {
-  background-color: #fff;
-  color: #00ff7f;
+  background-color: #00ff7f;
+  color: #000;
 }
 
 body.dark .highlight {
-  color: #fff;
+  color: #00ff7f;
 }
 
 /* Toggle Button */
